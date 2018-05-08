@@ -6,11 +6,11 @@ Search the regex that fits all querying strings.
 
 - Dozens of pre-written regexes are indexed and organized as a [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set), available in `regexorder/templates.json`.
 
-- The regex of all the querying string's least upper bound in the partial order is returned.
+- The regex of all the querying strings' least upper bound in the partial order is returned.
 
 - `templates.svg` plots the partial order.
 
-![Templates](templates.svg)
+![Templates](https://raw.githubusercontent.com/chuanconggao/RegexOrder/master/templates.svg?sanitize=true)
 
 The core part is the pre-written regexes and their respective structure. Currently they only cover the most common cases.
 
