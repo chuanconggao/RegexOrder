@@ -60,12 +60,12 @@ class RegexOrder(object):
             newcandidates = set()
 
             for t in candidates:
-                if t in tried:
+                if t in tried or res and res.order < t.order:
                     continue
                 tried.add(t)
 
                 if t.match(s):
-                    res = min(res, t, key=lambda x: x.order) if res else t
+                    res = t
 
                 for p in t.parents:
                     if p not in tried and p not in candidates:
