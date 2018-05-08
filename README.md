@@ -16,11 +16,15 @@ The core part is the pre-written regexes and their respective structure. Current
 
 - Any idea or contribution is highly welcome.
 
-Our regexes utilize some advanced Unicode features, that are not available in standard `re` library yet. Thus, the more advanced [`regex`](https://pypi.org/project/regex/) library must be used to match our regexes.
+## Reference
+
+This library is part of the implementation for our research paper to be submitted.
 
 ## Installation
 
 This package is available on PyPI. Just use `pip3 install -U RegexOrder` to install it.
+
+Our regexes utilize some advanced Unicode features, that are not available in standard `re` library yet. Thus, the more advanced [`regex`](https://pypi.org/project/regex/) library must be used to match our regexes.
 
 ## Examples
 
