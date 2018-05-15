@@ -62,14 +62,14 @@
     },
     {
         "regex": "formated\\p{Lu}\\p{Ll}*([^\\s\\w]+\\p{Lu}\\p{Ll}*)*formated",
-        "name": "multiple_formated_capital_words",
+        "name": "multiple_formated_titlecase_words",
         "parents": [
             "multiple_formated_words"
         ]
     },
     {
         "regex": "\\p{Lu}\\p{Ll}*(\\s+\\p{Lu}\\p{Ll}*)*",
-        "name": "multiple_capital_words",
+        "name": "multiple_titlecase_words",
         "parents": [
             "multiple_words"
         ]
@@ -132,11 +132,11 @@
     },
     {
         "regex": "\\p{Lu}\\p{Ll}*",
-        "name": "capital_word",
+        "name": "titlecase_word",
         "parents": [
             "word",
-            "multiple_capital_words",
-            "multiple_formated_capital_words"
+            "multiple_titlecase_words",
+            "multiple_formated_titlecase_words"
         ]
     },
     {
@@ -160,7 +160,7 @@
         "parents": [
             "letter",
             "uppercase_word",
-            "capital_word"
+            "titlecase_word"
         ]
     },
     {
