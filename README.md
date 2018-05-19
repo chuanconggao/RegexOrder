@@ -35,13 +35,13 @@ r = RegexOrder()
 
 t = r.match("123")
 t.name
-# 'positive_integer'
+# 'pos_int'
 t.regex
 # '\\+?\\d+'
 
 t = r.matchall(["apple", "banana", "cheese cake"])
 t.name
-# 'multiple_lowercase_words'
+# 'lower_words'
 t.regex
 # '\\p{Ll}+(\\s+\\p{Ll}+)*'
 ```

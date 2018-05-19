@@ -6,7 +6,7 @@
     },
     {
         "regex": "[^\\w\\s]+(\\s+[^\\w\\s]+)*",
-        "name": "multiple_symbols",
+        "name": "symbols",
         "parents": [
             "any"
         ]
@@ -15,128 +15,128 @@
         "regex": "[^\\w\\s]+",
         "name": "symbol",
         "parents": [
-            "multiple_symbols"
+            "symbols"
         ]
     },
     {
         "regex": "\\w+(\\s+\\w+)*",
-        "name": "multiple_words",
+        "name": "words",
         "parents": [
             "any"
         ]
     },
     {
         "regex": "[^\\s\\w]*\\w+([^\\s\\w]+\\w+)*[^\\s\\w]*",
-        "name": "multiple_formated_words",
+        "name": "formated_words",
         "parents": [
             "any"
         ]
     },
     {
         "regex": "[^\\s\\w]*\\p{Ll}+([^\\s\\w]+\\p{Ll}+)*[^\\s\\w]*",
-        "name": "multiple_formated_lowercase_words",
+        "name": "formated_lower_words",
         "parents": [
-            "multiple_formated_words"
+            "formated_words"
         ]
     },
     {
         "regex": "\\p{Ll}+(\\s+\\p{Ll}+)*",
-        "name": "multiple_lowercase_words",
+        "name": "lower_words",
         "parents": [
-            "multiple_words"
+            "words"
         ]
     },
     {
-        "regex": "formated\\p{Lu}+([^\\s\\w]+\\p{Lu}+)*formated",
-        "name": "multiple_formated_uppercase_words",
+        "regex": "[^\\s\\w]*\\p{Lu}+([^\\s\\w]+\\p{Lu}+)*[^\\s\\w]*",
+        "name": "formated_upper_words",
         "parents": [
-            "multiple_formated_words"
+            "formated_words"
         ]
     },
     {
         "regex": "\\p{Lu}+(\\s+\\p{Lu}+)*",
-        "name": "multiple_uppercase_words",
+        "name": "upper_words",
         "parents": [
-            "multiple_words"
+            "words"
         ]
     },
     {
-        "regex": "formated\\p{Lu}\\p{Ll}*([^\\s\\w]+\\p{Lu}\\p{Ll}*)*formated",
-        "name": "multiple_formated_titlecase_words",
+        "regex": "[^\\s\\w]*\\p{Lu}\\p{Ll}*([^\\s\\w]+\\p{Lu}\\p{Ll}*)*[^\\s\\w]*",
+        "name": "formated_title_words",
         "parents": [
-            "multiple_formated_words"
+            "formated_words"
         ]
     },
     {
         "regex": "\\p{Lu}\\p{Ll}*(\\s+\\p{Lu}\\p{Ll}*)*",
-        "name": "multiple_titlecase_words",
+        "name": "title_words",
         "parents": [
-            "multiple_words"
+            "words"
         ]
     },
     {
         "regex": "-?\\d+(\\s+-?\\d+)*",
-        "name": "multiple_integers",
+        "name": "ints",
         "parents": [
             "any"
         ]
     },
     {
         "regex": "[^\\s\\w]*-?\\d+((?:_|[^\\s\\w])+-?\\d+)*[^\\s\\w]*",
-        "name": "multiple_formated_integers",
+        "name": "formated_ints",
         "parents": [
             "any"
         ]
     },
     {
         "regex": "\\d+(\\s+\\d+)*",
-        "name": "multiple_positive_integers",
+        "name": "pos_ints",
         "parents": [
-            "multiple_words",
-            "multiple_integers"
+            "words",
+            "ints"
         ]
     },
     {
         "regex": "[^\\s\\w]*\\d+((?:_|[^\\s\\w])+\\d+)*[^\\s\\w]*",
-        "name": "multiple_formated_positive_integers",
+        "name": "formated_pos_ints",
         "parents": [
-            "multiple_formated_words",
-            "multiple_formated_integers"
+            "formated_words",
+            "formated_ints"
         ]
     },
     {
         "regex": "\\w+",
         "name": "word",
         "parents": [
-            "multiple_formated_words",
-            "multiple_words"
+            "formated_words",
+            "words"
         ]
     },
     {
         "regex": "\\p{Ll}+",
-        "name": "lowercase_word",
+        "name": "lower_word",
         "parents": [
             "word",
-            "multiple_lowercase_words",
-            "multiple_formated_lowercase_words"
+            "lower_words",
+            "formated_lower_words"
         ]
     },
     {
         "regex": "\\p{Lu}+",
-        "name": "uppercase_word",
+        "name": "upper_word",
         "parents": [
             "word",
-            "multiple_uppercase_words",
-            "multiple_formated_uppercase_words"
+            "upper_words",
+            "formated_upper_words"
         ]
     },
     {
         "regex": "\\p{Lu}\\p{Ll}*",
-        "name": "titlecase_word",
+        "name": "title_word",
         "parents": [
             "word",
-            "multiple_titlecase_words",
-            "multiple_formated_titlecase_words"
+            "title_words",
+            "formated_title_words"
         ]
     },
     {
@@ -148,65 +148,65 @@
     },
     {
         "regex": "\\p{Ll}",
-        "name": "lowercase_letter",
+        "name": "lower_letter",
         "parents": [
             "letter",
-            "lowercase_word"
+            "lower_word"
         ]
     },
     {
         "regex": "\\p{Lu}",
-        "name": "uppercase_letter",
+        "name": "upper_letter",
         "parents": [
             "letter",
-            "uppercase_word",
-            "titlecase_word"
+            "upper_word",
+            "title_word"
         ]
     },
     {
         "regex": "[+-]?\\d+(?:\\.\\d+)?",
-        "name": "number",
+        "name": "float",
         "parents": [
             "word"
         ]
     },
     {
         "regex": "\\+?\\d+(?:\\.\\d+)?",
-        "name": "positive_number",
+        "name": "pos_float",
         "parents": [
-            "number"
+            "float"
         ]
     },
     {
         "regex": "-\\d+(?:\\.\\d+)?",
-        "name": "negative_number",
+        "name": "neg_float",
         "parents": [
-            "number"
+            "float"
         ]
     },
     {
         "regex": "[+-]?\\d+",
-        "name": "integer",
+        "name": "int",
         "parents": [
-            "number"
+            "float"
         ]
     },
     {
         "regex": "\\+?\\d+",
-        "name": "positive_integer",
+        "name": "pos_int",
         "parents": [
-            "integer",
-            "multiple_positive_integers",
-            "multiple_formated_positive_integers",
-            "positive_number"
+            "int",
+            "pos_ints",
+            "formated_pos_ints",
+            "pos_float"
         ]
     },
     {
         "regex": "-\\d+",
-        "name": "negative_integer",
+        "name": "neg_int",
         "parents": [
-            "integer",
-            "negative_number"
+            "int",
+            "neg_float"
         ]
     },
     {
@@ -227,10 +227,10 @@
         "regex": "",
         "name": "none",
         "parents": [
-            "lowercase_letter",
-            "uppercase_letter",
-            "positive_integer",
-            "negative_integer",
+            "lower_letter",
+            "upper_letter",
+            "pos_int",
+            "neg_int",
             "url",
             "path",
             "symbol"
