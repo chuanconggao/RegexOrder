@@ -18,7 +18,18 @@ The core part is the pre-written regexes and their respective structure. Current
 
 ## Reference
 
-This library is part of the implementation for our research paper to be submitted.
+This library is part of the implementation for our research paper under review. If you plan to use it for research purpose, please cite either this repo  or our paper accordingly.
+
+``` tex
+@misc{regexorder,
+  author = {Chuancong Gao},
+  title = {{RegexOrder}},
+  howpublished = "\url{https://github.com/chuanconggao/RegexOrder}",
+  year = {2018}
+}
+```
+
+Detailed information of our paper will be released soon.
 
 ## Installation
 
