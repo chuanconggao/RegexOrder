@@ -16,9 +16,13 @@ The core part is the pre-written regexes and their respective structure. Current
 
 - Any idea or contribution is highly welcome.
 
+For interesting applications of this library, please refer to [`extratools`](https://www.chuancong.site/extratools/functions/tabletools/schema/).
+
 ## Reference
 
 This library is part of the implementation for our research paper under review. If you plan to use it for research purpose, please cite either this repo  or our paper accordingly.
+
+- Detailed information of our paper will be released soon.
 
 ``` tex
 @misc{regexorder,
@@ -28,8 +32,6 @@ This library is part of the implementation for our research paper under review. 
   year = {2018}
 }
 ```
-
-Detailed information of our paper will be released soon.
 
 ## Installation
 
